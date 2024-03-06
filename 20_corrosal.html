@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ padding: 0;
+  margin: 0;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  width: 100%;
+
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+}
+image{
+  width: 100%;
+}
+</style>
+<body>
+  <div class="carousel-container">
+    <div class="carousel-slide" id="slide1"><img src="images/balloon-fight.jpg" alt="d"></div>
+    <div class="carousel-slide" id="slide2"><img src="images/balloon-fight.jpg" alt="seond"></div>
+    <div class="carousel-slide" id="slide3"><img src="images/balloon-fight.jpg" alt="third"></div>
+    <div class="carousel-slide" id="slide3"><img src="images/balloon-fight.jpg" alt="third"></div>
+    <div class="carousel-slide" id="slide3"><img src="images/balloon-fight.jpg" alt="third"></div>
+  </div>
+
+  <script>
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${(i - index) * 100}%)`;
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+
+
+
+  </script>
+</body>
+</html>

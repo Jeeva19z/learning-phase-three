@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Page</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            color: red;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        img{
+            width: 100%;
+        }
+        .main{
+            position: relative;
+        }
+        .wrapper{
+            position: absolute;
+            top:10px;
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <img  src="img/1.jpg" alt="Heart Image">
+    <div class="wrapper">
+    
+      
+        <h1>I Love You</h1>
+    <p>You are the most amazing person in my life. I am grateful to have you by my side. Your love fills my heart with joy and happiness. Every moment spent with you is a treasure. I want to spend the rest of my life loving you.</p>
+    <p>Forever yours,</p>
+    <p>Your Name</p>
+    </div>
+
+    </div>
+
+    <script>
+
+function randomnumGenerate(){
+    var firstname = prompt("Enter Him Name :");
+    var firstname = prompt("Enter Her Name :");
+    var numbergen = Math.floor(Math.random()*101);
+//    alert(numbergen);
+    if(numbergen>70){
+       alert("Your love score is : "+numbergen + " Your the Romio julliet couples");
+        
+    }
+    else if(numbergen >= 40 && numbergen <= 70 )
+    {
+        alert("Your love score is : "+numbergen + " Your the Earth of around moon");
+    }
+    else{
+        alert("Your love score is : "+numbergen + " Your the like oil and water!");
+    }
+    
+}
+randomnumGenerate();
+
+        </script>
+</body>
+</html>

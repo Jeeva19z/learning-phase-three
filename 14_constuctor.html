@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crete the object</title>
+</head>
+<body>
+    
+<script>
+
+// below code is normaly crete object incase n-number person are there it take too time so use the contructor.
+//  constructor can esaly identify by the starting worik CAPTITAL this is called contrcuto function.
+//  new keeyword is important because it contrutor.
+var houseKeeping1 = {
+    name : "Tammy",
+    yearOfEperice : "02",
+    speaklanguange : ["Tamil","English","Franch"],
+    cleaningRepertorie:["bathroon","lobby","bedroom"]
+
+}
+
+// or by constructor
+function HousekeepingFactory(name,yearOfEperice,speaklanguange,cleaningRepertorie){
+    this.name=name;
+    this.yearOfEperice=yearOfEperice;
+    this.speaklanguange=speaklanguange;
+    this.cleaningRepertorie=cleaningRepertorie;
+}
+var houseKeeping1 =  new HousekeepingFactory("sakura","01",["Tamil","English"],"bathroom");
+var houseKeeping2 =  new HousekeepingFactory("timary","03",["Tamil","Frech"],"bathroom");
+
+    </script>
+
+</body>
+</html>

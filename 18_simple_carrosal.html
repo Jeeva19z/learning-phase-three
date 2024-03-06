@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    .carousel-container {
+
+        position: relative;
+        width: 100%;
+        border: 2px solid rebeccapurple;
+
+    }
+
+    .carousel-slide {
+        display: none;
+    }
+
+    img {
+
+        height: 400px;
+        width: 100%;
+    }
+
+    span:nth-child(1) {
+
+
+        color: rgb(206, 62, 10);
+    }
+
+    span:nth-child(2) {
+
+
+        color: skyblue;
+    }
+
+    span:nth-child(3) {
+
+
+        color: rgb(19, 206, 69);
+    }
+
+    .round {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    i {
+        cursor: pointer;
+        font-size: 12px;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div class="carousel-container">
+
+
+        <div class="round">
+
+            <span id="slidetwo" style="font-size: 30px;"> <i class="fa-regular fa-circle"></i></span>
+
+            <span id="slidethree" style="font-size: 30px;"> <i class="fa-regular fa-circle"></i></span>
+
+            <span id="slideone" style="font-size: 30px;"> <i class="fa-regular fa-circle"></i></span>
+        </div>
+
+
+
+        <div class="carousel-slide" id="sd">
+            <img src="images/balloon-fight.jpg" alt="Image 1">
+        </div>
+
+        <div class="carousel-slide">
+            <img src="images/pexels-pixabay-221299.jpg" alt="Image 2">
+        </div>
+
+
+        
+        <div class="carousel-slide">
+            <img src="images/water-tree.jpg" alt="Image 3">
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+        loadslide();
+
+        function loadslide() {
+            var slide = document.getElementsByClassName("carousel-slide");
+
+            slide[0].style.display = "block";
+            slide[1].style.display = "none";
+            slide[2].style.display = "none";
+
+
+        }
+
+        document.querySelector("#slideone").addEventListener("click", function () {
+
+
+            loadslide();
+
+
+        });
+
+        document.querySelector("#slidetwo").addEventListener("click", function () {
+
+            var slide = document.getElementsByClassName("carousel-slide");
+
+            slide[0].style.display = "none";
+            slide[1].style.display = "block";
+            slide[2].style.display = "none";
+
+
+
+
+        });
+
+        document.querySelector("#slidethree").addEventListener("click", function () {
+
+            var slide = document.getElementsByClassName("carousel-slide");
+
+            slide[1].style.display = "none";
+            slide[0].style.display = "none";
+            slide[2].style.display = "block";
+
+
+
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

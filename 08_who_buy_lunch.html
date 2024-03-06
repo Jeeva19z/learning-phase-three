@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who buy the lunch today </title>
+</head>
+<body>
+ 
+
+
+<script>
+
+var choose = ["jeeva","hani","hema","moorthi","madhu","dhara","murugan"]
+ 
+function whobu(chooseaccept){
+    var name= chooseaccept.length;
+    var ranDom =Math.floor( Math.random() * name);
+   
+    var output = choose[ranDom];
+
+    
+ 
+    return output + " will buy a lunch today!";
+
+}
+
+    // whobu(choose);
+ alert(whobu(choose));
+
+ 
+</script>
+</script>
+    
+</body>
+</html>

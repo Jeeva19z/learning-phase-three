@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab switch</title>
+</head>
+<style>
+    .tab{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+       
+    }
+    .onee{
+        order: 13;
+    }
+    .two{
+        order: 2;
+    }
+    .tab-switch{
+        padding: 10px;
+       flex-basis: 300px;
+      
+    }
+    .tab .active{
+        background-color: lightblue;
+    }
+    .tabcontent {
+        color: burlywood;
+        display: none;
+      
+    }
+   .active-para{
+    display: block;        
+    }
+   .contenttwo, .contentthree{
+        display: none;
+        
+    }
+    .content{
+        text-align: center;
+      
+    }
+  
+</style>
+<body>
+
+    <div class="tab">
+        <button  class="tab-switch onee">Tab 1</button>
+        <button  class="tab-switch two">Tab 2</button>
+        <button  class="tab-switch">Tab 3</button>
+
+
+
+          </div>
+          
+          <div class="content">
+            <p  class="contentone">Lorem ipsum dolor sit amet. tab 1</p>
+            <p   class="contenttwo">Lorem ipsum dolor sit amet. tab 2</p>
+            <p   class="contentthree">Lorem ipsum dolor sit amet. tab 3</p>
+          </div>
+<script>
+    var contentone=document.querySelector(".contentone");
+    var contenttwo=document.querySelector(".contenttwo");
+    var contentthree=document.querySelector(".contentthree");
+
+      
+document.querySelectorAll(".tab-switch")[0].addEventListener("click",function(){
+
+    contentone.style.display="block";
+    contenttwo.style.display="none";
+    contentthree.style.display="none";
+
+
+
+
+});
+
+      
+document.querySelectorAll(".tab-switch")[1].addEventListener("click",function(){
+
+contentone.style.display="none";
+contenttwo.style.display="block";
+contentthree.style.display="none";
+
+
+
+});
+
+document.querySelectorAll(".tab-switch")[2].addEventListener("click",function(){
+
+contentone.style.display="none";
+contenttwo.style.display="none";
+contentthree.style.display="block";
+
+
+
+});
+   
+
+</script>
+</body>
+</html>

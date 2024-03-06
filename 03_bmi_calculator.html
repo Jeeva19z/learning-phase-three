@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <script>
+function bmi(){
+    var height = prompt("Enter the height :");
+    var weight = prompt("Enter the weight :");
+
+    var bmicalculater = (weight) / ((height)*(height));
+    bmicalculater = Math.floor(bmicalculater * 10000);
+    // var bmicalculater = (height + weight);
+
+    if(bmicalculater<18){
+    alert("Your BMI value is " + bmicalculater+". It's Under weight");
+}
+else if (18 >= bmicalculater || bmicalculater <= 25){
+     alert("Your BMI value is " + bmicalculater+". It's Normal weight");
+    
+}
+else {
+     alert("Your BMI value is " + bmicalculater+". It's Over weight");
+}
+}
+bmi();
+</script>
+</body>
+</html>
